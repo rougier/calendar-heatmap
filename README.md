@@ -1,5 +1,10 @@
 ### Calendar heatmap
 
-A calendar heatmap made with matplotlib and **random** data.
+#### Github activity for user rougier (real data)
+
+![](github-activity.png)
+
+
+#### Calendar heatmap with **random** data.
 
 ![](calendar-heatmap.png)
