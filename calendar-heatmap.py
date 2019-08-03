@@ -69,7 +69,7 @@ calmap(ax, 2019, I.reshape(53,7).T)
 
 
 plt.tight_layout()
-plt.savefig("calendar-heatmap.png")
+plt.savefig("calendar-heatmap.png", dpi=300)
 plt.savefig("calendar-heatmap.pdf", dpi=600)
 plt.show()
 
