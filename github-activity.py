@@ -56,9 +56,9 @@ def calmap(ax, year, data, origin="upper", weekstart="sun"):
 
     start = datetime(year,1,1).weekday()
 
-    _data = np.zeros(7*53)*np.nan
+    _data = np.zeros(7*54)*np.nan
     _data[start:start+len(data)] = data
-    data = _data.reshape(53,7).T
+    data = _data.reshape(54,7).T
     
     for month in range(1,13):
         first = datetime(year, month, 1)
@@ -95,14 +95,14 @@ def calmap(ax, year, data, origin="upper", weekstart="sun"):
     
     # Showing data
     cmap = plt.cm.get_cmap('Purples')
-    ax.imshow(data, extent=[0, 53, 0, 7], zorder=10,
+    ax.imshow(data, extent=[0, 54, 0, 7], zorder=10,
               vmin=0, vmax=10, cmap=cmap, origin=origin)
     
 fig = plt.figure(figsize=(8,7.5), dpi=100)
 year = 2014
 n = 5
 for i in range(n):
-    ax = plt.subplot(n,1,i+1, xlim=[0,53], ylim=[0,7], frameon=False, aspect=1)
+    ax = plt.subplot(n,1,i+1, xlim=[0,54], ylim=[0,7], frameon=False, aspect=1)
     calmap(ax, year+i, github_contrib("rougier", year+i), origin="upper")
 
 plt.tight_layout()
